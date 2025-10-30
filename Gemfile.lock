@@ -70,12 +70,17 @@ GEM
       public_suffix (>= 2.0.2, < 7.0)
     ansi (1.5.0)
     ast (2.4.3)
+    autoprefixer-rails (10.4.21.0)
+      execjs (~> 2)
     backport (1.2.0)
     base64 (0.3.0)
     benchmark (0.4.1)
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
+    bootstrap-sass (3.4.1)
+      autoprefixer-rails (>= 5.2.1)
+      sassc (>= 2.0.0)
     builder (3.3.0)
     capybara (3.38.0)
       addressable
@@ -94,6 +99,7 @@ GEM
     e2mmap (0.1.0)
     erb (5.1.1)
     erubi (1.13.1)
+    execjs (2.10.0)
     ffi (1.17.2-aarch64-linux-gnu)
     ffi (1.17.2-aarch64-linux-musl)
     ffi (1.17.2-arm-linux-gnu)
@@ -369,6 +375,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (= 1.16.0)
+  bootstrap-sass (= 3.4.1)
   capybara (= 3.38.0)
   guard (= 2.18.0)
   guard-minitest (= 2.4.6)
