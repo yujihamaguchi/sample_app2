@@ -14,7 +14,7 @@ gem 'sqlite3', '1.6.1'
 gem 'stimulus-rails', '1.2.1'
 gem 'turbo-rails', '1.4.0'
 group :development, :test do
-  # gem "debug", "1.7.1", platforms: %i[ mri mingw x64_mingw ]
+  gem 'debug', '1.11.0', platforms: %i[mri mingw x64_mingw]
 end
 group :development do
   gem 'irb', '1.10.0'
