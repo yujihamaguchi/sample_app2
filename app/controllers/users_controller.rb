@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      puts ''
+      # tbd
     else
       render 'new', status: :unprocessable_entity
     end
@@ -19,6 +19,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params[:user].require(:user).permit(:name, :email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 end
