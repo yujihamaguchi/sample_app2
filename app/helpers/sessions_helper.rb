@@ -10,7 +10,6 @@ module SessionsHelper
   end
 
   def logged_in?
-    # !!session[:user_id]
     !current_user.nil?
   end
 end
