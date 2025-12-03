@@ -3,6 +3,11 @@ module SessionsHelper
     session[:user_id] = user.id
   end
 
+  def log_out
+    reset_session
+    @current_user = nil
+  end
+
   def current_user
     return unless session[:user_id]
 
