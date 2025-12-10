@@ -4,6 +4,8 @@ ruby '3.2.4'
 gem 'bcrypt', '3.1.18'
 gem 'bootsnap', '1.16.0', require: false
 gem 'bootstrap-sass', '3.4.1'
+gem 'bootstrap-will_paginate', '1.0.0'
+gem 'faker', '2.21.0'
 gem 'importmap-rails', '1.1.5'
 gem 'jbuilder', '2.11.5'
 gem 'puma', '5.6.8'
@@ -13,6 +15,7 @@ gem 'sprockets-rails', '3.4.2'
 gem 'sqlite3', '1.6.1'
 gem 'stimulus-rails', '1.2.1'
 gem 'turbo-rails', '1.4.0'
+gem 'will_paginate', '3.3.1'
 group :development, :test do
   gem 'debug', '1.11.0', platforms: %i[mri mingw x64_mingw]
 end
@@ -33,5 +36,5 @@ group :test do
   gem 'webdrivers', '5.2.0'
 end
 group :production do
-  gem "pg", "1.3.5"
+  gem 'pg', '1.3.5'
 end
