@@ -42,4 +42,12 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     get users_path
     assert_redirected_to login_url
   end
+
+  test 'should not allow the admin attribute to be edited via the web' do
+    log_in_as(@other_user)
+    refute @other_user.admin?
+    patch user_path(@other_user),
+          params: { user: { admin: true } }
+    refute @other_user.reload.admin?
+  end
 end
