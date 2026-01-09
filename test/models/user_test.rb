@@ -103,6 +103,7 @@ class UserTest < ActiveSupport::TestCase
 
     michael.microposts.each do |micropost|
       assert michael.feed.include?(micropost)
+      assert_equal michael.feed.distinct, michael.feed
     end
 
     archer.microposts.each do |micropost|
