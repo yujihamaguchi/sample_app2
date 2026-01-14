@@ -8,6 +8,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   test 'should get new' do
     get signup_path
     assert_response :success
+    assert_template 'users/new'
   end
 
   test 'should redirect edit when not logged in' do

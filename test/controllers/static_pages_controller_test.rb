@@ -15,7 +15,6 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     get help_path
     assert_response :success
     assert_select 'title', "Help | #{@base_title}"
-
   end
 
   test 'should get about' do
@@ -24,7 +23,7 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_select 'title', "About | #{@base_title}"
   end
 
-  test "should get contact" do
+  test 'should get contact' do
     get contact_path
     assert_response :success
     assert_select 'title', "Contact | #{@base_title}"
