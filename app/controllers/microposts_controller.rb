@@ -13,6 +13,7 @@ class MicropostsController < ApplicationController
   end
 
   def destroy
+    @micropost = Micropost.find(params[:id])
     @micropost.destroy
     flash[:success] = 'Micropost deleted'
     redirect_back_or_to root_url, status: :see_other
@@ -25,7 +26,8 @@ class MicropostsController < ApplicationController
   end
 
   def correct_user
-    @micropost = current_user.microposts.find_by(id: params[:id])
-    redirect_to root_url, status: :see_other if @micropost.nil?
+    redirect_to root_url, status: :see_other unless current_user.microposts.any? do |micropost|
+      micropost.id == params[:id].to_i
+    end
   end
 end
