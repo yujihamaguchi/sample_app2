@@ -10,6 +10,8 @@ module SessionsHelper
   end
 
   def current_user
+    return @current_user if @current_user
+
     if (user_id = session[:user_id])
       user = User.find_by(id: user_id)
       @current_user = user if user && session[:session_token] == user.session_token
