@@ -11,12 +11,18 @@ class InvalidPasswordTest < UsersLoginTest
     get login_path
     assert_template 'sessions/new'
   end
+
   test 'login with valid email/invalid password' do
     post login_path, params: { session: { email: @user.email,
                                           password: 'foobar' } }
     refute is_logged_in?
     assert_template 'sessions/new'
     refute flash.empty?
+  end
+
+  test 'flash message disappears after moving to another page' do
+    post login_path, params: { session: { email: @user.email,
+                                          password: 'foobar' } }
     get root_path
     assert flash.empty?
   end
