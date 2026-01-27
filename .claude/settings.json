@@ -1,0 +1,22 @@
+{
+  "agents": {
+    "code-reviewer": "agents/code-reviewer.md",
+    "tdd-guide": "agents/tdd-guide.md",
+    "planner": "agents/planner.md",
+    "refactor-cleaner": "agents/refactor-cleaner.md",
+    "debug-helper": "agents/debug-helper.md",
+    "security-reviewer": "agents/security-reviewer.md",
+    "performance-reviewer": "agents/performance-reviewer.md",
+    "migration-guide": "agents/migration-guide.md",
+    "model-designer": "agents/model-designer.md",
+    "test-fixer": "agents/test-fixer.md"
+  },
+  "commands": {
+    "review": "commands/review.md",
+    "tdd": "commands/tdd.md",
+    "plan": "commands/plan.md",
+    "refactor": "commands/refactor.md",
+    "debug": "commands/debug.md",
+    "test-fix": "commands/test-fix.md"
+  }
+}
