@@ -18,5 +18,12 @@ module SampleApp2
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # クリーンアーキテクチャ用のカスタムディレクトリをautoloadパスに追加
+    config.autoload_paths += %W[
+      #{config.root}/app/domain
+      #{config.root}/app/usecases
+      #{config.root}/app/repositories
+    ]
   end
 end
