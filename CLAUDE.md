@@ -414,9 +414,10 @@ rails test:system  # システムテスト
 
 ## 進捗管理
 
-### Phase 0: 基盤整備 ⏳ 未着手
-- [ ] `config/application.rb` - autoload設定追加
-- [ ] `app/domain/entity.rb` - エンティティベースクラス作成
+### Phase 0: 基盤整備 🚧 進行中
+- [x] `config/application.rb` - autoload設定追加
+- [x] `app/domain/entity.rb` - エンティティベースクラス作成（IDを必須に変更）
+- [x] `app/domain/services/id_generator.rb` - グローバル一意IDジェネレーター作成（タイムスタンプベース、クラスメソッド）
 - [ ] `app/domain/value_object.rb` - 値オブジェクトベースクラス作成
 - [ ] `app/usecases/base_usecase.rb` - UseCaseベースクラス作成
 - [ ] `app/domain/repositories/repository.rb` - リポジトリ基底インターフェース作成
